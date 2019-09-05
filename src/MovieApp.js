@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Movie from './Movie';
 
 class MovieApp extends Component{
     constructor(){
@@ -28,8 +29,16 @@ class MovieApp extends Component{
         console.log("COmponent REndered");
         console.log(this.state.movieData);
 
+        const movies = this.state.movieData.map((movie, i)=>{
+            return (
+                <Movie key={i} movie={movie} />
+            )
+        })
+
         return(
-            <h1>Movie Component!</h1>
+            <div>
+                {movies}
+            </div>
         )
     }
 }
