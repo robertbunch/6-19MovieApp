@@ -1,4 +1,3 @@
-// The very first thing we always import in a new COmponet
 import React from 'react';
 
 function Movie(props){
@@ -8,7 +7,7 @@ function Movie(props){
     return(
         <div className="col s3 center">
             <a href={moviePath}>
-                <img src={imagePath} />
+                <img alt={props.movie.title} src={imagePath} />
             </a>
             <div>
                 {props.movie.title}
